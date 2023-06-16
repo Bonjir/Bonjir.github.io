@@ -17,6 +17,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <tags>
+        <tag>hide</tag>
+      </tags>
   </entry>
   <entry>
     <title>【esp32】micropython实现自动登录校园网</title>
