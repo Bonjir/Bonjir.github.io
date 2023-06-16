@@ -1168,6 +1168,12 @@ pre .javascript .function {
   padding: 2px;
   border-radius: 50%;
 }
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
+}
 .site-author-name {
   color: var(--text-color);
   font-weight: 600;
@@ -1194,7 +1200,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5094ff;
+  background: #b87f0f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1519,10 +1525,7 @@ pre .javascript .function {
   position: fixed;
   transition-property: bottom;
   z-index: 1300;
-  width: 24px;
-}
-.back-to-top span {
-  display: none;
+  width: initial;
 }
 .back-to-top:hover {
   color: #fc6423;
@@ -1693,15 +1696,12 @@ pre .javascript .function {
   top: 1.25em;
   width: 4px;
 }
-.post-eof {
+.posts-expand .post-eof {
+  display: block;
+  width: 0%;
+  height: 0px;
   background: #ccc;
-  height: 1px;
-  margin: 80px auto 60px;
   text-align: center;
-  width: 8%;
-}
-.post-block:last-of-type .post-eof {
-  display: none;
 }
 .content {
   padding-top: 40px;
