@@ -1200,7 +1200,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fff4ff;
+  background: #db38ed;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1696,13 +1696,15 @@ pre .javascript .function {
   top: 1.25em;
   width: 4px;
 }
-.posts-expand .post-eof {
-  display: block;
-  margin: 80px auto 60px;
-  width: 8%;
-  height: 1px;
+.post-eof {
   background: #ccc;
+  height: 1px;
+  margin: 80px auto 60px;
   text-align: center;
+  width: 8%;
+}
+.post-block:last-of-type .post-eof {
+  display: none;
 }
 .content {
   padding-top: 40px;
