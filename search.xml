@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【esp32】micropython实现自动登录校园网</title>
+    <url>/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/</url>
+    <content><![CDATA[<p>上回书说到，笔者通过python在电脑上成功实现了自动登录校园网的脚本之后，开始琢磨如何在esp32上实现这一功能，这样就可以不用连接热点也能自动联网了。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>esp32</category>
+      </categories>
+      <tags>
+        <tag>esp32</tag>
+        <tag>micropython</tag>
+        <tag>python</tag>
+        <tag>网络</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/06/10/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>!</p>
@@ -20,23 +37,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>【esp32】micropython实现自动登录校园网</title>
-    <url>/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/</url>
-    <content><![CDATA[<p>上回书说到，笔者通过python在电脑上成功实现了自动登录校园网的脚本之后，开始琢磨如何在esp32上实现这一功能，这样就可以不用连接热点也能自动联网了。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>esp32</category>
-      </categories>
-      <tags>
-        <tag>esp32</tag>
-        <tag>micropython</tag>
-        <tag>python</tag>
-        <tag>网络</tag>
-        <tag>http</tag>
-      </tags>
   </entry>
   <entry>
     <title>【python】自动登录中科大校园网</title>
