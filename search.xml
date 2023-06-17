@@ -99,8 +99,12 @@
       </tags>
   </entry>
   <entry>
-    <title>article</title>
-    <url>/2023/06/17/article/</url>
-    <content><![CDATA[]]></content>
+    <title>test</title>
+    <url>/2023/06/17/test/</url>
+    <content><![CDATA[<p>test</p>
+]]></content>
+      <tags>
+        <tag>hide</tag>
+      </tags>
   </entry>
 </search>
