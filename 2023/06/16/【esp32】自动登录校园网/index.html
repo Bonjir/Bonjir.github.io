@@ -19,17 +19,17 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"bonjir.life","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="上回书说到，笔者通过python在电脑上成功实现了自动登录校园网的脚本。在这之后，笔者开始思考如何在esp32上实现这一功能，并且实现一个可以无需依赖手机热点的物联网小项目。本文将首先介绍esp32联网所涉及的模块，并且对各个模块的用法进行阐释，再回顾一下登录校园网脚本的步骤，最后总结一下整个过程中的与出现的问题与解决办法并将各个部分的代码整合起来给出完整的示例代码。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【esp32】micropython实现自动登录校园网">
-<meta property="og:url" content="http://example.com/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/index.html">
+<meta property="og:url" content="http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/index.html">
 <meta property="og:site_name" content="蛋糕瓶子">
 <meta property="og:description" content="上回书说到，笔者通过python在电脑上成功实现了自动登录校园网的脚本。在这之后，笔者开始思考如何在esp32上实现这一功能，并且实现一个可以无需依赖手机热点的物联网小项目。本文将首先介绍esp32联网所涉及的模块，并且对各个模块的用法进行阐释，再回顾一下登录校园网脚本的步骤，最后总结一下整个过程中的与出现的问题与解决办法并将各个部分的代码整合起来给出完整的示例代码。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/viewsource.png">
+<meta property="og:image" content="http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/viewsource.png">
 <meta property="article:published_time" content="2023-06-16T11:27:45.000Z">
 <meta property="article:modified_time" content="2023-06-17T15:58:02.814Z">
 <meta property="article:author" content="瓶装蛋糕">
@@ -39,9 +39,9 @@
 <meta property="article:tag" content="网络">
 <meta property="article:tag" content="http">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/viewsource.png">
+<meta name="twitter:image" content="http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/viewsource.png">
 
-<link rel="canonical" href="http://example.com/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/">
+<link rel="canonical" href="http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/">
 
 
 <script id="page-configurations">
@@ -208,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/">
+    <link itemprop="mainEntityOfPage" href="http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -342,7 +342,7 @@
 
 <p>然后这<del>两坨答辩</del>就碰撞出了美妙而几近天衣无缝的bug：一个返回gbk，一个没法解码gbk，直接报错<code>&#39;utf-8&#39; codec can&#39;t decode byte 0xb5 in position 4: invalid start byte</code> ，并且还定位不到错误位置，几乎无解。最后还是通过更改urequests源代码，把encoding去掉的方式解决的。</p>
 <p>更多有关requests库和urequests的内容可以查看<a target="_blank" rel="noopener" href="https://requests.readthedocs.io/projects/cn/zh_CN/latest/">requests官方文档</a>和<a target="_blank" rel="noopener" href="https://makeblock-micropython-api.readthedocs.io/zh/latest/public_library/Third-party-libraries/urequests.html">micropython文档中对urequests的描述</a>。笔者更改过后的urequests模块源代码放在<a href="urequests.rar">这里</a>。</p>
-<h1 id="二、校园网登录"><a href="#二、校园网登录" class="headerlink" title="二、校园网登录"></a>二、校园网登录</h1><p>利用python实现的校园网自动登录脚本详见<a target="_blank" rel="noopener" href="http://bonjir.life/2023/06/12/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E4%B8%AD%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91/">上一篇文章</a>，这里只做简单的回顾。</p>
+<h1 id="二、校园网登录"><a href="#二、校园网登录" class="headerlink" title="二、校园网登录"></a>二、校园网登录</h1><p>利用python实现的校园网自动登录脚本详见<a href="http://bonjir.life/2023/06/12/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E4%B8%AD%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91/">上一篇文章</a>，这里只做简单的回顾。</p>
 <p>校园网自动登录有两种方式，webdriver模拟浏览器法和requests模拟请求法，其中前者并不受micropython的支持，因此想要实现模拟登陆只能通过urequests模块。校园网络通登录并连接互联网需要进行两次请求，先进行一次post以提交用户信息并让服务端记录本地ip，再发送一次get请求开通网络。</p>
 <p>post与get的请求头都通过浏览器抓包获取并且制作成字典，数据正文则可以在浏览器抓包后点击view source按钮，然后复制正文直接放进字符串。</p>
 <p><img src="/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/viewsource.png" alt="view source"></p>
