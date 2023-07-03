@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
+    
+    <lastmod>2023-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bonjir.life/resources/index.html</loc>
     
     <lastmod>2023-07-01</lastmod>
@@ -32,15 +41,6 @@
     <loc>http://bonjir.life/404.html</loc>
     
     <lastmod>2023-06-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
-    
-    <lastmod>2023-06-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
