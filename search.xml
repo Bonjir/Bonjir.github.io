@@ -22,15 +22,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/2023/06/17/test/</url>
-    <content><![CDATA[<p>test</p>
-]]></content>
-      <tags>
-        <tag>hide</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【esp32】micropython实现自动登录校园网</title>
     <url>/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/</url>
     <content><![CDATA[<p>上回书说到，笔者通过python在电脑上成功实现了自动登录校园网的脚本。在这之后，笔者开始思考如何在esp32上实现这一功能，并且实现一个可以无需依赖手机热点的物联网小项目。本文将首先介绍esp32联网所涉及的模块，并且对各个模块的用法进行阐释，再回顾一下登录校园网脚本的步骤，最后总结一下整个过程中的与出现的问题与解决办法并将各个部分的代码整合起来给出完整的示例代码。</p>

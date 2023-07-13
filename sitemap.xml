@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bonjir.life/resources/about_physicsexp.html</loc>
+    
+    <lastmod>2023-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
     
     <lastmod>2023-07-03</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>http://bonjir.life/resources/index.html</loc>
-    
-    <lastmod>2023-07-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://bonjir.life/resources/about_physicsexp.html</loc>
     
     <lastmod>2023-07-01</lastmod>
     
@@ -48,15 +48,6 @@
   
   <url>
     <loc>http://bonjir.life/2023/06/12/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E4%B8%AD%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91/</loc>
-    
-    <lastmod>2023-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://bonjir.life/2023/06/17/test/</loc>
     
     <lastmod>2023-06-17</lastmod>
     
@@ -94,50 +85,43 @@
 
   <url>
     <loc>http://bonjir.life/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://bonjir.life/tags/hide/</loc>
-    <lastmod>2023-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://bonjir.life/tags/esp32/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bonjir.life/tags/micropython/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bonjir.life/tags/python/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bonjir.life/tags/%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bonjir.life/tags/http/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -146,21 +130,21 @@
   
   <url>
     <loc>http://bonjir.life/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bonjir.life/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/esp32/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bonjir.life/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/python/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

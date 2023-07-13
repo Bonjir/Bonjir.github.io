@@ -1,15 +1,13 @@
+http://bonjir.life/resources/about_physicsexp.html
 http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/
 http://bonjir.life/resources/index.html
-http://bonjir.life/resources/about_physicsexp.html
 http://bonjir.life/about/index.html
 http://bonjir.life/404.html
 http://bonjir.life/2023/06/12/%E3%80%90python%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E4%B8%AD%E7%A7%91%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91/
-http://bonjir.life/2023/06/17/test/
 http://bonjir.life/2023/06/10/hello-world/
 http://bonjir.life/tags/index.html
 http://bonjir.life/categories/index.html
 http://bonjir.life/
-http://bonjir.life/tags/hide/
 http://bonjir.life/tags/esp32/
 http://bonjir.life/tags/micropython/
 http://bonjir.life/tags/python/
