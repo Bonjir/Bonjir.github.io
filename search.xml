@@ -225,7 +225,8 @@
 
 <p><img src="/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/result.png"></p>
 <hr>
-<p><a href="https://github.com/Bonjir/esp32/tree/main/espremote">espremote模块</a>是一个能够给予特定协议远程控制esp32开发板的实用工具。利用Espremote可以远程连接板子、管理文件系统以及上传、下载文件，该模块的pc端、esp32端模块和示例程序已经放在<a href="https://github.com/Bonjir/esp32/tree/main/espremote">本人的仓库</a>里了，欢迎大家取用。</p>
+<p><a href="https://github.com/Bonjir/esp32/tree/main/espremote">espremote模块</a>是一个能够给予特定协议远程控制esp32开发板的实用工具。利用Espremote可以远程连接板子、管理文件系统以及上传、下载文件。  </p>
+<p>该模块的pc端、esp32端模块和示例程序已经放在<a href="https://github.com/Bonjir/esp32/tree/main/espremote">本人的仓库</a>里了，欢迎大家取用。</p>
 ]]></content>
       <categories>
         <category>技术笔记</category>
