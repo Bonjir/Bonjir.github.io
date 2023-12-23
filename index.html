@@ -198,6 +198,113 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://bonjir.life/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="瓶装蛋糕">
+      <meta itemprop="description" content="梦多了就追不过来了">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蛋糕瓶子">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/" class="post-title-link" itemprop="url">【esp32】espremote实现OTA在线更新程序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-12-22 23:17:57" itemprop="dateCreated datePublished" datetime="2023-12-22T23:17:57+08:00">2023-12-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-12-23 13:56:58" itemprop="dateModified" datetime="2023-12-23T13:56:58+08:00">2023-12-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">技术笔记</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/esp32/" itemprop="url" rel="index"><span itemprop="name">esp32</span></a>
+                </span>
+            </span>
+
+          
+            
+            <span id="/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/" class="post-meta-item leancloud_visitors" data-flag-title="【esp32】espremote实现OTA在线更新程序" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="评论数" href="/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>近日做了一个自动关灯的小东西，放在宿舍里可以避免断电后忘记关灯导致第二天”怀民亦未寝.jpg”。不过有一个问题，这东西是粘在墙上的，想要调试的话总不能搬个电脑蹲在灯旁边debug一个下午吧。正当笔者苦恼于又要买一个3m超长数据线的时候，灵光一现，想到python作为一种脚本语言，是否可以在运行时更新代码呢？  </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/22/%E3%80%90esp32%E3%80%91espremote%E5%AE%9E%E7%8E%B0OTA%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://bonjir.life/2023/06/16/%E3%80%90esp32%E3%80%91%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E6%A0%A1%E5%9B%AD%E7%BD%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -570,7 +677,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -583,7 +690,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -622,7 +729,7 @@
 <div class="copyright">
   
   &copy; 2023-06 – 
-  <span itemprop="copyrightYear">2023-07</span>
+  <span itemprop="copyrightYear">2023-12</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
